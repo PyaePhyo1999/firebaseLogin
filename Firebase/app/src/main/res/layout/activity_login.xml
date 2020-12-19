@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/llSignIn"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="-47dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="@string/app_name"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_large_2"
+                android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/margin_small_2"
+        android:layout_marginRight="@dimen/margin_small_2"
+        android:id="@+id/llSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <include layout="@layout/linear_layout_sign_in" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_large">
+         <include
+             layout="@layout/relative_layout_sign_up"/>
+
+    </LinearLayout>
+</RelativeLayout>

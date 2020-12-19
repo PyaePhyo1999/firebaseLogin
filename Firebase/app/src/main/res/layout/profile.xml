@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:id="@+id/rvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_large">
+
+        <ImageView
+                android:id="@+id/ivEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profile_email_28dp" />
+
+        <TextView
+                android:id="@+id/tvMail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_toRightOf="@id/ivEmail"
+                android:text="@string/email"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_medium_5" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/rvPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rvEmail"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large">
+
+        <ImageView
+                android:id="@+id/ivPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_profile_phone_28dp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_toRightOf="@id/ivPhone"
+                android:text="@string/phone"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_medium_5" />
+
+    </RelativeLayout>
+
+<!--    <RelativeLayout-->
+<!--            android:id="@+id/rvAddress"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/rvPhone"-->
+<!--            android:layout_marginLeft="@dimen/margin_ex_large_3x"-->
+<!--            android:layout_marginTop="@dimen/margin_large">-->
+
+<!--        <ImageView-->
+<!--                android:id="@+id/ivAddress"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/ic_profile_address_28dp" />-->
+
+<!--        <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="@dimen/margin_large"-->
+<!--                android:layout_toRightOf="@id/ivAddress"-->
+<!--                android:text="@string/address"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:textSize="@dimen/text_medium" />-->
+<!--    </RelativeLayout>-->
+
+</RelativeLayout>

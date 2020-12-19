@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".activities.NoteListActivity">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:id="@+id/rvTitleBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+            <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:text="@string/home_screen"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_medium_4" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNoteList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rvTitleBar"
+                android:layout_marginLeft="@dimen/margin_small_1"
+                android:layout_marginTop="@dimen/margin_medium_1"
+                android:layout_marginRight="@dimen/margin_small_1" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbAddNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/ic_baseline_add_24"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginBottom="@dimen/margin_large"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/white">
+
+    <RelativeLayout
+            android:id="@+id/rlTitleBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+        <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/margin_small_1"
+                android:text="@string/add_note"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_medium_4" />
+
+        <ImageView
+                android:id="@+id/ivSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ivBackPress"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_medium_2"
+                android:src="@drawable/ic_note_save_24" />
+
+        <ImageView
+                android:id="@+id/ivBackPress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+            android:id="@+id/rlAddNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlTitleBar"
+            android:layout_marginLeft="@dimen/text_medium_2"
+            android:layout_marginTop="@dimen/margin_small_2"
+            android:layout_marginRight="@dimen/margin_medium_2">
+
+        <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayout"
+                android:id="@+id/inputEtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/grey"
+                app:boxStrokeColor="@color/colorAccent">
+
+            <EditText
+                    android:id="@+id/etTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/note_title"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/text_medium_3" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayout"
+                android:id="@+id/inputEtbrief"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/grey"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                app:boxStrokeColor="@color/colorAccent"
+                android:layout_below="@+id/inputEtTitle">
+        <EditText
+                android:id="@+id/etBrief"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:hint="@string/et_brief"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/text_medium_3" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+</RelativeLayout>
