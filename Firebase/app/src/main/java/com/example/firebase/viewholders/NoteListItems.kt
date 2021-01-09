@@ -10,16 +10,8 @@ import com.example.firebase.delegates.OnTapNoteList
 
 import org.w3c.dom.Text
 
-class NoteListItems(itemView: View,private val mDelegate : OnTapNoteList) : RecyclerView.ViewHolder(itemView),View.OnClickListener {
+class NoteListItems(itemView: View) : RecyclerView.ViewHolder(itemView){
     val tvTitle : TextView =itemView.findViewById(R.id.tvNoteTitle)
     val tvBrief : TextView = itemView.findViewById(R.id.tvBrief)
     val ivDelete :ImageView = itemView.findViewById(R.id.ivDeleteItem)
-
-    private lateinit var mData : List<NoteEntities>
-
-    override fun onClick(p0: View?) {
-            mDelegate.onTapItem(this.mData)
-    }
-
-
 }

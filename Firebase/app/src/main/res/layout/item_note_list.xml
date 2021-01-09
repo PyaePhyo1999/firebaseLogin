@@ -6,6 +6,7 @@
         android:layout_marginLeft="@dimen/margin_small_2"
         android:layout_marginTop="@dimen/margin_small_2"
         android:layout_marginRight="@dimen/margin_small_2"
+        android:layout_marginBottom="@dimen/margin_small_2"
         android:elevation="@dimen/margin_small_2"
         android:foreground="@drawable/bg_ripple_btn"
         app:cardBackgroundColor="@android:color/white"

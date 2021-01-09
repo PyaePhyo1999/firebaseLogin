@@ -3,6 +3,7 @@ package com.example.firebase.activities
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -93,7 +94,8 @@ class NoteListActivity : BaseActivity(), OnTapNoteList {
         dialog.show()
     }
 
-    override fun onTapItem(item: List<NoteEntities>) {
+
+    override fun onTapItem(item: NoteEntities) {
         val intent = NoteDetailActivity.newIntent(applicationContext)
         startActivity(intent)
     }
