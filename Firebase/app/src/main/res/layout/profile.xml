@@ -7,7 +7,7 @@
             android:id="@+id/rvEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_large">
+            android:layout_marginStart="@dimen/margin_medium_2">
 
         <ImageView
                 android:id="@+id/ivEmail"
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/rvEmail"
-            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginStart="@dimen/margin_medium_2"
             android:layout_marginTop="@dimen/margin_large">
 
         <ImageView
@@ -52,28 +52,28 @@
 
     </RelativeLayout>
 
-<!--    <RelativeLayout-->
-<!--            android:id="@+id/rvAddress"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@id/rvPhone"-->
-<!--            android:layout_marginLeft="@dimen/margin_ex_large_3x"-->
-<!--            android:layout_marginTop="@dimen/margin_large">-->
+    <!--    <RelativeLayout-->
+    <!--            android:id="@+id/rvAddress"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_below="@id/rvPhone"-->
+    <!--            android:layout_marginLeft="@dimen/margin_ex_large_3x"-->
+    <!--            android:layout_marginTop="@dimen/margin_large">-->
 
-<!--        <ImageView-->
-<!--                android:id="@+id/ivAddress"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:src="@drawable/ic_profile_address_28dp" />-->
+    <!--        <ImageView-->
+    <!--                android:id="@+id/ivAddress"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:src="@drawable/ic_profile_address_28dp" />-->
 
-<!--        <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginLeft="@dimen/margin_large"-->
-<!--                android:layout_toRightOf="@id/ivAddress"-->
-<!--                android:text="@string/address"-->
-<!--                android:textColor="@color/colorPrimary"-->
-<!--                android:textSize="@dimen/text_medium" />-->
-<!--    </RelativeLayout>-->
+    <!--        <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginLeft="@dimen/margin_large"-->
+    <!--                android:layout_toRightOf="@id/ivAddress"-->
+    <!--                android:text="@string/address"-->
+    <!--                android:textColor="@color/colorPrimary"-->
+    <!--                android:textSize="@dimen/text_medium" />-->
+    <!--    </RelativeLayout>-->
 
 </RelativeLayout>

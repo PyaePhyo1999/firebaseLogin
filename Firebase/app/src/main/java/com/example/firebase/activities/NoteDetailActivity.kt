@@ -11,9 +11,7 @@ class NoteDetailActivity : BaseActivity(){
         fun newIntent(context : Context) : Intent{
             return Intent(context,NoteDetailActivity::class.java)
         }
-
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_note_detail)

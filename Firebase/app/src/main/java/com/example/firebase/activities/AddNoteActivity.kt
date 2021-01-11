@@ -26,7 +26,7 @@ class AddNoteActivity : BaseActivity() {
     private val ivSave by lazy{
         findViewById<ImageView>(R.id.ivSave)
     }
-    private val ivBackPres by lazy {
+    private val ivBackPress by lazy {
          findViewById<ImageView>(R.id.ivBackPress)
     }
 
@@ -35,7 +35,7 @@ class AddNoteActivity : BaseActivity() {
         setContentView(R.layout.activity_add_note)
 
 
-            ivBackPres.setOnClickListener {
+            ivBackPress.setOnClickListener {
                 onBackPressed()
                 finish()
             }

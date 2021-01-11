@@ -39,7 +39,7 @@ class LoginActivity : BaseActivity() {
 
 
         if (Model.getInstance().isUserLogin()) {
-            updateUI()
+            toNoteListActivity()
         }
 
         mAuth = FirebaseAuth.getInstance()
@@ -47,10 +47,7 @@ class LoginActivity : BaseActivity() {
             signIn()
         }
         createRequest()
-
-       
     }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == RC_SIGN_IN) {
@@ -63,7 +60,7 @@ class LoginActivity : BaseActivity() {
                         applicationContext, "Google Sign-In success : "
                                 + account!!.displayName, Toast.LENGTH_SHORT
                     ).show()
-                    updateUI()
+                    toNoteListActivity()
                 }
 
             } catch (e: ApiException) {
@@ -90,7 +87,7 @@ class LoginActivity : BaseActivity() {
                         }
 
                         override fun onFailureSignIn() {
-
+                            Toast.makeText(applicationContext, "Google Sign In failed", Toast.LENGTH_LONG).show()
                         }
 
                     })
@@ -103,9 +100,6 @@ class LoginActivity : BaseActivity() {
         super.onStop()
         finish()
     }
-
-
-
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.

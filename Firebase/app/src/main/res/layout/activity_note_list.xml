@@ -24,6 +24,15 @@
                     android:text="@string/home_screen"
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/text_medium_4" />
+
+            <ImageView
+                    android:id="@+id/ivProfileActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="@dimen/margin_medium_2"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_profile_24"/>
         </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView

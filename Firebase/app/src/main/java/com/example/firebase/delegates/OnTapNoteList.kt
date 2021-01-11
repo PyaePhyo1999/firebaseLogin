@@ -1,6 +1,5 @@
 package com.example.firebase.delegates
 
-import android.view.View
 import com.example.firebase.db.entities.NoteEntities
 
 interface OnTapNoteList {

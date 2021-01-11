@@ -17,25 +17,47 @@ open class BaseActivity : AppCompatActivity() {
         val executor = Executors.newSingleThreadExecutor()!!
     }
 
-     fun createRequest() {
+    fun createRequest() {
         val googleSignInOption = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
-      mGoogleSignInClient = GoogleSignIn.getClient(this,googleSignInOption)
+        mGoogleSignInClient = GoogleSignIn.getClient(this, googleSignInOption)
 
     }
 
-     fun signIn() {
+    fun signIn() {
         val intent = mGoogleSignInClient.signInIntent
         startActivityForResult(
             intent,
             AppUtils.RC_SIGN_IN
         )
     }
-    fun updateUI() {
-    val intent = NoteListActivity.newIntent(applicationContext)
-    startActivity(intent)
-}
+
+    fun toNoteListActivity() {
+        val intent = NoteListActivity.newIntent(applicationContext)
+        startActivity(intent)
+    }
+
+    fun toLoginActivity() {
+        val intent = LoginActivity.newIntent(applicationContext)
+        startActivity(intent)
+    }
+
+    fun toNoteDetailActivity() {
+        val intent = NoteDetailActivity.newIntent(applicationContext)
+        startActivity(intent)
+    }
+
+    fun toLoginProfileActivity() {
+        val intent = LoginProfileActivity.newIntent(this)
+        startActivity(intent)
+    }
+
+    fun toAddNoteActivity() {
+        val intent = AddNoteActivity.newIntent(applicationContext)
+        startActivity(intent)
+    }
+
 
 }

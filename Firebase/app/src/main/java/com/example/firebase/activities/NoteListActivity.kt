@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,17 +15,15 @@ import com.example.firebase.db.DatabaseProvider
 import com.example.firebase.db.entities.NoteEntities
 import com.example.firebase.delegates.OnTapNoteList
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.activity_note_list.*
 
 class NoteListActivity : BaseActivity(), OnTapNoteList {
 
 
-    lateinit var mNoteListAdapter: NoteListAdapter
-    private val rvNoteList by lazy {
-        findViewById<RecyclerView>(R.id.rvNoteList)
-    }
-    private val fbAddNote by lazy {
-        findViewById<FloatingActionButton>(R.id.fbAddNote)
-    }
+    private lateinit var mNoteListAdapter: NoteListAdapter
+    private val rvNoteList by lazy { findViewById<RecyclerView>(R.id.rvNoteList) }
+    private val fbAddNote by lazy { findViewById<FloatingActionButton>(R.id.fbAddNote) }
+    private val ivProfile by lazy { findViewById<ImageView>(R.id.ivProfileActivity) }
 
     companion object {
         fun newIntent(context: Context): Intent {
@@ -45,7 +44,10 @@ class NoteListActivity : BaseActivity(), OnTapNoteList {
             executeDb()
 
             fbAddNote.setOnClickListener {
-                getAddNoteActivity()
+                toAddNoteActivity()
+            }
+            ivProfileActivity.setOnClickListener {
+               toLoginProfileActivity()
             }
 
 
@@ -57,11 +59,6 @@ class NoteListActivity : BaseActivity(), OnTapNoteList {
     override fun onBackPressed() {
         super.onBackPressed()
         finishAffinity()
-    }
-
-    private fun getAddNoteActivity() {
-        val intent = AddNoteActivity.newIntent(applicationContext)
-        startActivity(intent)
     }
 
     private fun executeDb() {
@@ -79,25 +76,24 @@ class NoteListActivity : BaseActivity(), OnTapNoteList {
         val dialog = AlertDialog.Builder(this)
             .setTitle("Delete Item")
             .setMessage("Are you sure to delete Items")
-            .setNegativeButton("No"){dialog,_->
+            .setNegativeButton("No") { dialog, _ ->
                 dialog.cancel()
             }
-            .setPositiveButton("Yes"){dialog, _->
-        executor.execute {
-            DatabaseProvider.instance(this).noteDao().deleteNote(item)
-            executeDb()
+            .setPositiveButton("Yes") { dialog, _ ->
+                executor.execute {
+                    DatabaseProvider.instance(this).noteDao().deleteNote(item)
+                    executeDb()
 
-        }
+                }
 
                 dialog.dismiss()
-        }.create()
+            }.create()
         dialog.show()
     }
 
 
     override fun onTapItem(item: NoteEntities) {
-        val intent = NoteDetailActivity.newIntent(applicationContext)
-        startActivity(intent)
+       toNoteDetailActivity()
     }
 
 
